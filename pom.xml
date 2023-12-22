@@ -15,10 +15,9 @@
     </properties>
     <dependencies>
         <dependency>
-            <groupId>io.appium</groupId>
+            <groupId>com.github.appium</groupId>
             <artifactId>java-client</artifactId>
-            <version>8.5.0</version>
-            <scope>test</scope>
+            <version>4ab6b53</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -27,5 +26,11 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
 
 </project>

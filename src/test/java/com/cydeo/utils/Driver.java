@@ -3,7 +3,6 @@ package com.cydeo.utils;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
-import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.MutableCapabilities;
 
 import java.net.MalformedURLException;
@@ -27,7 +26,7 @@ public class Driver {
         if(Objects.isNull(driver)){
             switch (platform){
                 case "android-calculator":
-                    caps.setCapability(MobileCapabilityType.APP,"https://cybertek-appium.s3.amazonaws.com/calculator.apk");
+                    caps.setCapability("appium:app","https://cybertek-appium.s3.amazonaws.com/calculator.apk");
                     try {
                         url = new URL("http://localhost:4723");
                     } catch (MalformedURLException e) {
@@ -36,7 +35,7 @@ public class Driver {
                     driver = new AndroidDriver(url,caps);
                     break;
                 case "android-etsy":
-                    caps.setCapability(MobileCapabilityType.APP,"https://cybertek-appium.s3.amazonaws.com/etsy.apk");
+                    caps.setCapability("appium:app","https://cybertek-appium.s3.amazonaws.com/etsy.apk");
                     caps.setCapability("appPackage","com.etsy.android");
                     caps.setCapability("appActivity","com.etsy.android.ui.user.auth.SignInActivity");
                     try {
@@ -47,7 +46,7 @@ public class Driver {
                     driver = new AndroidDriver(url,caps);
                     break;
                 case "android-saucelabapp":
-                    caps.setCapability(MobileCapabilityType.APP,"/Users/Oscar/IdeaProjects/AppiumTests/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk");
+                    caps.setCapability("appium:app","/Users/oscar/IdeaProjects/MobileTesting/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk");
                     caps.setCapability("appPackage","com.swaglabsmobileapp");
                     caps.setCapability("appActivity","com.swaglabsmobileapp.SplashActivity");
                     try {
@@ -65,7 +64,7 @@ public class Driver {
                     capsR.setCapability("appium:deviceOrientation", "PORTRAIT");
                     capsR.setCapability("appium:automationName", "UiAutomator2");
                     // Application Set-Up
-                    capsR.setCapability(MobileCapabilityType.APP,"https://github.com/saucelabs/sample-app-mobile/releases/download/2.7.1/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk");
+                    capsR.setCapability("appium:app","https://github.com/saucelabs/sample-app-mobile/releases/download/2.7.1/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk");
                     capsR.setCapability("appPackage","com.swaglabsmobileapp");
                     capsR.setCapability("appActivity","com.swaglabsmobileapp.SplashActivity");
                     MutableCapabilities sauceOptions = new MutableCapabilities();

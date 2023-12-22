@@ -2,9 +2,7 @@ package com.cydeo.test;
 
 import com.cydeo.utils.ConfigurationReader;
 import com.cydeo.utils.Driver;
-import com.cydeo.utils.MobileUtils;
 import io.appium.java_client.AppiumBy;
-import io.appium.java_client.MobileBy;
 import io.appium.java_client.android.AndroidDriver;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -18,13 +16,13 @@ public class SauceLabAppTest {
         AndroidDriver driver = Driver.getDriver();
 
         // locate userName
-        driver.findElement(MobileBy.AccessibilityId("test-Username")).sendKeys(ConfigurationReader.getProperty("userName"));
+        driver.findElement(new AppiumBy.ByAccessibilityId("test-Username")).sendKeys(ConfigurationReader.getProperty("userName"));
 
         // locate password field
-        driver.findElement(MobileBy.accessibilityId("test-Password")).sendKeys(ConfigurationReader.getProperty("password"));
+        driver.findElement(new AppiumBy.ByAccessibilityId("test-Password")).sendKeys(ConfigurationReader.getProperty("password"));
 
         // locate login button
-        driver.findElement(MobileBy.accessibilityId("test-LOGIN")).click();
+        driver.findElement(new AppiumBy.ByAccessibilityId("test-LOGIN")).click();
 
         Thread.sleep(5000);
 
@@ -34,9 +32,9 @@ public class SauceLabAppTest {
 
         // How to scroll down in this mobile app
 
-       MobileUtils.scrollIntoView("Policy");
+     //  MobileUtils.scrollIntoView("Privacy Policy");
 
-        Thread.sleep(3000);
+      //  Thread.sleep(3000);
 
        System.out.println(driver.getDeviceTime());
 

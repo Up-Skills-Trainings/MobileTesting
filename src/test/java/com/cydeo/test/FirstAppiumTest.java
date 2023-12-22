@@ -1,12 +1,8 @@
 package com.cydeo.test;
 
-import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 

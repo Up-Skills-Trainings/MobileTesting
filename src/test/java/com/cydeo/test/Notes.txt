@@ -1,0 +1,32 @@
+Notes for Today's Live Lesson:
+       * Mobile Testing : UI/FrontEnd Testing same as Selenium WebApp Testing
+       * Which tool : Appium, a wrapper for Selenium API, so that we can execute automated test cases for Native, Hybrid and WebAPP for mobile devices
+       * Appium is famous because it is used for both Android and IOS devices
+
+THings to remember while watching Installation and Lesson videos
+    * We have instructions as PDF file and Videos for both Windows and MACOS
+    * Windows people has to watch MACOS videos as well to be able to create the framework
+
+ What you will need to be able to automate with Appium:
+        - Java JDK and JAVA_HOME set up
+        - Android Studio Code for emulator(cellphone device) and Android SDK (software development kit)
+        - Appium Server installed
+        - Appium Inspector - nice to have
+        - Appium Doctor - nice to have
+
+Common Problems and How to fix them:
+        - Windows: HAXM problem - virtualization : needs to be handled from BIOS setting
+        - With both Windows and MacOS : setting up environmental variables
+                * JAVA_HOME
+                * ANDROID_HOME
+        - Windows guys goes to environmental setup
+        - MacOS guys create .zprofile document to set these variables
+
+ How to mention appium or mobile testing in your resume
+        - Skills part : Selenium, Java etc... Appium as a tool
+        - Projects, if you need to mention it: automating mobile app for Android devices,
+        - Saucelab as a cloud testing tool. Used saucelab servers to automate our test cases in the remote as a part of CI/CD pipeline
+
+* Please use your github project link for the latest codes and pom.xml settings,
+* The ones in the videos are changed.
+

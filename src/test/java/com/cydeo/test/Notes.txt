@@ -1,3 +1,5 @@
+First Live Review Session Before Watching Recordings
+
 Notes for Today's Live Lesson:
        * Mobile Testing : UI/FrontEnd Testing same as Selenium WebApp Testing
        * Which tool : Appium, a wrapper for Selenium API, so that we can execute automated test cases for Native, Hybrid and WebAPP for mobile devices
@@ -29,4 +31,88 @@ Common Problems and How to fix them:
 
 * Please use your github project link for the latest codes and pom.xml settings,
 * The ones in the videos are changed.
+
+***********************************************************
+Second Live Review Notes After Watching Recordings
+
+**** Please fill out Alumni Mentor Survey first: https://www.surveymonkey.com/r/B30_Alumni_Mentor
+
+0. WHY Mobile Testing important for your carrier and your company???????
+        Mobile Devices in our life: Phones, TVs, watches, Car Devices, Tablets etc...
+        Do you guys think that 5 years from now will there be any customer who will use regular desktop computer for their daily needs?
+
+1. What is Mobile Testing?
+        As a user when we are interacting with our mobile devices (phones), how do you open/use an application sucj as Amazon or Etsy, X
+        -- etsy webapplication we open in our mobile device chrome browsers : webapp testing in mobile devices
+        -- we download app from google store or apple store and install it  : Native App Testing
+        -- testing mobile views on a browser: how my application will react in different screen sizes, testing your webapp with mobile view
+            we can use an extension to test different mobile views for our application, this is not mobile testing, but can be considered as part of it
+            https://chromewebstore.google.com/detail/mobile-view-test-responsi/clepmakjkiihmfoepipckkafafdepjne?pli=1
+
+2. How is it done?
+    Manual Mobile Testing: buy real mobile devices, no automation, no CI/CD process, expensive and risky
+
+    Automation Way:
+    Common tool used for testing is Appium: an API/Wrapper that communicates your code (Java, JS, Pyhton etc., because it uses Selenium as an API) to a mobile devices and acts like a SERVER in between
+    You need a mobile device: When we are running our code locally, you create emulator (android), simulator (ios) -virtual
+    we prepare our test for remote execution
+    Companies pay subscription to Saucelab, BitBar, AppCenter, Browserstack for real mobile device that are on server
+
+    We need to set up capabilities in our code to be able to send our test cases
+
+
+3. How can we mention it in interviews/Resume?
+       How did you do mobile testing in your company?
+       Companies use a third party provider for mobile app builds and distribution (AppCenter)
+       So these distributers also provide a testing environment(real mobile devices, appium servers)
+       You write your using Java language and Appium Client (dependency) to write my tests
+       When the code of application changes it initiates jenkins/github actions to run auto way smoke tests on the server.
+
+       Resume: Appium client and server for mobile testing, Android Studio for Emulators, Using servers for remote testing on real/virtual iphone and android devices
+
+4. Example tests structure in this repository
+
+        Calculator, etsy : native apps that are run locally only
+        SauceLab: first prepared locally and tested then executed on SauceLab server for remote execution
+
+        We will test etsy chrome webapp locally.
+        We will review how to execute tests on Saucelab android
+        A new test, we will execute on iphone
+
+
+**** We need to inspect elements locate them with appium inspector:
+        1. CLI inspector (app itself)  write following caps and save it and start server with 'appium' command
+        {
+          "appium:deviceName": "Pixel 3",
+          "appium:platformVersion": "10",
+          "appium:automationName": "UiAutomator2",
+          "platformName": "Android"
+        }
+        2. Inspector from browser start the appium with 'appium --allow-cors'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

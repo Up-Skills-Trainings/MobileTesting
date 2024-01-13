@@ -16,8 +16,8 @@ public class WebTestBase {
     @BeforeEach
     public void setUp(){
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-        desiredCapabilities.setCapability("appium:automationName","UiAutomater2");
-        desiredCapabilities.setCapability("appium:platforName","Android");
+        desiredCapabilities.setCapability("appium:automationName","UiAutomator2");
+        desiredCapabilities.setCapability("appium:platformName","Android");
         desiredCapabilities.setCapability("appium:platformVersion","10.0");
         desiredCapabilities.setCapability("appium:deviceName","Pixel 3");
         desiredCapabilities.setCapability("appium:browserName","Chrome");

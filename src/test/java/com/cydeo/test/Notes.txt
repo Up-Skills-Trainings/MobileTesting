@@ -93,7 +93,9 @@ Second Live Review Notes After Watching Recordings
 
 
 
+In order to allow appium to download necessary browser from web we need to start our appium with following command:
 
+appium --allow-insecure chromedriver_autodownload
 
 
 

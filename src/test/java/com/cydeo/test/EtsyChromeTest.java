@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
-import java.security.Key;
+
 
 public class EtsyChromeTest extends WebTestBase{
     // this test case is for etsy webapp on chrome browser, not native app

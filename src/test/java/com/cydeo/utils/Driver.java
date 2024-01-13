@@ -47,8 +47,8 @@ public class Driver {
                     break;
                 case "android-saucelabapp":
                     // change the case to point to local test drive
-                   // String testDir = System.getProperty();
-                    caps.setCapability("appium:app","/Users/oscar/IdeaProjects/MobileTesting/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk");
+                    String testDir = System.getProperty("user.dir");
+                    caps.setCapability("appium:app",testDir+"Android.SauceLabs.Mobile.Sample.app.2.7.1.apk");
                     caps.setCapability("appPackage","com.swaglabsmobileapp");
                     caps.setCapability("appActivity","com.swaglabsmobileapp.SplashActivity");
                     try {
